@@ -4,7 +4,7 @@
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server",
     "api": "nodemon server.js --exec babel-node --presets es2015",
-    "build": "NODE_ENV=build webpack --progress --colors --watch"
+    "build": "webpack --progress --colors --watch"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

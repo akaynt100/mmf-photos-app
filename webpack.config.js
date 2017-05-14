@@ -24,24 +24,29 @@ const common = {
   }
 };
 
-let config;
+// let config;
 
-switch (process.env.NODE_ENV) {
-  case 'build':
-    config = merge(
-      common,
-      { devtool: 'source-map' }
-    );
-    break;
-  case 'development':
-    config = merge(
-      common,
-      { devtool: 'eval-source-map' },
-      loaders.devServer({
-        host: process.env.host,
-        port: 3000
-      })
-    );
-}
+const config = merge(
+  common,
+  { devtool: 'source-map' }
+);
+
+// switch (process.env.NODE_ENV) {
+//   case 'build':
+//     config = merge(
+//       common,
+//       { devtool: 'source-map' }
+//     );
+//     break;
+//   case 'development':
+//     config = merge(
+//       common,
+//       { devtool: 'eval-source-map' },
+//       loaders.devServer({
+//         host: process.env.host,
+//         port: 3000
+//       })
+//     );
+// }
 
 module.exports = config;
